@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
+import { Router } from '@angular/router';
 import { AuthService } from '../services/auth.service';
 
 @Component({
@@ -10,7 +11,10 @@ import { AuthService } from '../services/auth.service';
 export class LoginComponent implements OnInit {
   loginForm!: FormGroup;
 
-  constructor(private authSerivce: AuthService) { }
+  constructor(
+    private authSerivce: AuthService,
+    private router: Router
+    ) { }
 
   ngOnInit(): void {
     this.loginForm = new FormGroup({
@@ -30,6 +34,10 @@ export class LoginComponent implements OnInit {
         console.error(err)
       }
     })
-  }  
+  }
+  
+  onRegisterClick(): void {
+    this.router.navigate(['register']);
+  }
 
 }
