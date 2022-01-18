@@ -8,6 +8,7 @@ import { CostumeSampleComponent } from './costume-sample/costume-sample.componen
 import { UniformOrderComponent } from './uniform-order/uniform-order.component';
 import { UniformSampleComponent } from './uniform-sample/uniform-sample.component';
 import { RegisterComponent } from './register/register/register.component';
+import { CustomerComponent } from './customer/customer.component';
       
 const routes: Routes = [
   { path: 'home', component: HomeComponent },
@@ -16,6 +17,7 @@ const routes: Routes = [
   { path: 'uniform-order', component: UniformOrderComponent },
   { path: 'uniform-sample', component: UniformSampleComponent },
   { path: 'register', component: RegisterComponent},
+  { path: 'customer', component: CustomerComponent },
   { path: 'login', component: LoginComponent },
   { path: '',   redirectTo: '/login', pathMatch: 'full' },
   { path: '**', component: PageNotFoundComponent }
