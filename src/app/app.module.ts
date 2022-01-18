@@ -10,6 +10,8 @@ import { HomeComponent } from './home/home.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { OrdersComponent } from './orders/orders.component';
+import { HttpClientModule } from '@angular/common/http';
+import { RegisterComponent } from './register/register/register.component';
 
 @NgModule({
   declarations: [
@@ -18,13 +20,15 @@ import { OrdersComponent } from './orders/orders.component';
     NavBarComponent,
     PageNotFoundComponent,
     HomeComponent,
-    OrdersComponent
+    OrdersComponent,
+    RegisterComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     ReactiveFormsModule,
-    NgbModule
+    NgbModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
