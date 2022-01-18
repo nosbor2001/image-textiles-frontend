@@ -1,0 +1,17 @@
+label, input {
+    display: block;
+}
+
+label {
+    margin-top: 10px;
+}
+
+.btn{
+    margin-right: 10px;
+    margin-top: 10px;
+}
+
+a.disabled {
+    pointer-events: none;
+    cursor: default;
+}

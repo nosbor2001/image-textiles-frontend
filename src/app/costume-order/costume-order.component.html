@@ -1,6 +1,5 @@
 <app-nav-bar></app-nav-bar>
 <router-outlet></router-outlet>
-<app-orders></app-orders>
 <!-- Need costume orders, costume samples, uniform orders, uniform samples -->
 <div class="container-fluid">
 
@@ -12,6 +11,11 @@
         <button onchange="orderSelect(3)" ngbDropdownItem>Uniform Orders</button>
         <button onchange="orderSelect(4)" ngbDropdownItem>Uniform Samples</button>
     </div> -->
+
+    <a class="btn btn-primary disabled" routerLink="/costume-order" routerLinkActive="active">Costume Order</a>
+    <a class="btn btn-primary" routerLink="/costume-sample" routerLinkActive="active">Costume Samples</a>
+    <a class="btn btn-primary" routerLink="/uniform-order" routerLinkActive="active">Uniform Orders</a>
+    <a class="btn btn-primary" routerLink="/uniform-sample" routerLinkActive="active">Uniform Samples</a>
 
     <div formGroupName="costumeOrders">
         <form [formGroup]="costumeOrders" (ngSubmit)="onSubmit()"></form>
