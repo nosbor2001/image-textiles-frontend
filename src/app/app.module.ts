@@ -9,7 +9,11 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
 import { HomeComponent } from './home/home.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { CostumeOrderComponent } from './costume-order/costume-order.component';
 import { OrdersComponent } from './orders/orders.component';
+import { CostumeSampleComponent } from './costume-sample/costume-sample.component';
+import { UniformOrderComponent } from './uniform-order/uniform-order.component';
+import { UniformSampleComponent } from './uniform-sample/uniform-sample.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +22,11 @@ import { OrdersComponent } from './orders/orders.component';
     NavBarComponent,
     PageNotFoundComponent,
     HomeComponent,
-    OrdersComponent
+    CostumeOrderComponent,
+    OrdersComponent,
+    CostumeSampleComponent,
+    UniformOrderComponent,
+    UniformSampleComponent
   ],
   imports: [
     BrowserModule,

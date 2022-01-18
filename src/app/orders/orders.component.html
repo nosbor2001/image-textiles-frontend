@@ -3,15 +3,7 @@
 
 <!-- Need costume orders, costume samples, uniform orders, uniform samples -->
 
-<div class="container-fluid">
-    <form [formGroup]="costumeOrders" (ngSubmit)="onSubmit()"></form>
-
-    <label for="customer-name">Customer Name: </label>
-    <input id="customer-name" type="text" formControlName="customerName">
-  
-    <label for="contact-one">Contact 1: </label>
-    <input id="contact-one" type="text" formControlName="contactOne">
-
-    <label for="contact-two">Contact 2: </label>
-    <input id="contact-two" type="text" formControlName="contactTwo">
-</div>
+<a class="btn btn-primary" routerLink="/costume-orders" routerLinkActive="active">Costume Order</a>
+<a class="btn btn-primary" routerLink="/costume-samples" routerLinkActive="active">Costume Samples</a>
+<a class="btn btn-primary" routerLink="/uniform-orders" routerLinkActive="active">Uniform Orders</a>
+<a class="btn btn-primary" routerLink="/uniform-samples" routerLinkActive="active">Uniform Samples</a>

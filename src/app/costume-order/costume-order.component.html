@@ -1,0 +1,28 @@
+<app-nav-bar></app-nav-bar>
+<router-outlet></router-outlet>
+<app-orders></app-orders>
+<!-- Need costume orders, costume samples, uniform orders, uniform samples -->
+<div class="container-fluid">
+
+    <!-- <div ngbDropdown class="d-inline-block">
+    <button class="btn btn-outline-primary" id="dropdownOrders" ngbDropdownToggle>Toggle dropdown</button>
+    <div ngbDropdownMenu aria-labelledby="dropdownOrders">
+        <button onchange="orderSelect(1)" ngbDropdownItem>Costume Orders</button>
+        <button onchange="orderSelect(2)" ngbDropdownItem>Costume Samples</button>
+        <button onchange="orderSelect(3)" ngbDropdownItem>Uniform Orders</button>
+        <button onchange="orderSelect(4)" ngbDropdownItem>Uniform Samples</button>
+    </div> -->
+
+    <div formGroupName="costumeOrders">
+        <form [formGroup]="costumeOrders" (ngSubmit)="onSubmit()"></form>
+
+        <label for="customerName">Customer Name: </label>
+        <input id="customerName" type="text" class="form-control mb-4" formControlName="customerName">
+    
+        <label for="contactOne">Contact 1: </label>
+        <input id="contactOne" type="text" class="form-control mb-4" formControlName="contactOne">
+
+        <label for="contactTwo">Contact 2: </label>
+        <input id="contactTwo" type="text" class="form-control mb-4" formControlName="contactTwo">
+    </div>
+</div>
