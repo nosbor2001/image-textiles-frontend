@@ -14,6 +14,7 @@ import { CostumeSampleComponent } from './costume-sample/costume-sample.componen
 import { UniformOrderComponent } from './uniform-order/uniform-order.component';
 import { UniformSampleComponent } from './uniform-sample/uniform-sample.component';
 import { HttpClientModule } from '@angular/common/http';
+import { CustomerComponent } from './customer/customer.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { HttpClientModule } from '@angular/common/http';
     CostumeOrderComponent,
     CostumeSampleComponent,
     UniformOrderComponent,
-    UniformSampleComponent
+    UniformSampleComponent,
+    CustomerComponent
   ],
   imports: [
     BrowserModule,
