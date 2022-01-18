@@ -9,9 +9,10 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
 import { HomeComponent } from './home/home.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
-import { OrdersComponent } from './orders/orders.component';
-import { HttpClientModule } from '@angular/common/http';
-import { RegisterComponent } from './register/register/register.component';
+import { CostumeOrderComponent } from './costume-order/costume-order.component';
+import { CostumeSampleComponent } from './costume-sample/costume-sample.component';
+import { UniformOrderComponent } from './uniform-order/uniform-order.component';
+import { UniformSampleComponent } from './uniform-sample/uniform-sample.component';
 
 @NgModule({
   declarations: [
@@ -20,15 +21,16 @@ import { RegisterComponent } from './register/register/register.component';
     NavBarComponent,
     PageNotFoundComponent,
     HomeComponent,
-    OrdersComponent,
-    RegisterComponent
+    CostumeOrderComponent,
+    CostumeSampleComponent,
+    UniformOrderComponent,
+    UniformSampleComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     ReactiveFormsModule,
-    NgbModule,
-    HttpClientModule
+    NgbModule
   ],
   providers: [],
   bootstrap: [AppComponent]
