@@ -13,6 +13,7 @@ import { CostumeOrderComponent } from './costume-order/costume-order.component';
 import { CostumeSampleComponent } from './costume-sample/costume-sample.component';
 import { UniformOrderComponent } from './uniform-order/uniform-order.component';
 import { UniformSampleComponent } from './uniform-sample/uniform-sample.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import { UniformSampleComponent } from './uniform-sample/uniform-sample.componen
     BrowserModule,
     AppRoutingModule,
     ReactiveFormsModule,
-    NgbModule
+    NgbModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
