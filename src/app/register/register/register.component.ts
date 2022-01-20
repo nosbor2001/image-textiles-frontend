@@ -33,7 +33,7 @@ export class RegisterComponent implements OnInit {
 
   onSubmit(): void {
     const {username, role, password} = this.registerForm.value 
-    if(username.length <= 5 || username.length >= 15) {
+    if(username.length < 5 || username.length > 15) {
       this.alertService.showAlert('Error', "Username must be between 5 and 15 characters", "error", false)
     } else {
       if(!PASSWORD_REGEX.test(password)) {

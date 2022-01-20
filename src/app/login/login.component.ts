@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
 import { Router } from '@angular/router';
 import { AuthService } from '../services/auth.service';
+import { TokenStorageService } from '../services/token-storage.service';
 
 @Component({
   selector: 'app-login',
@@ -13,7 +14,8 @@ export class LoginComponent implements OnInit {
 
   constructor(
     private authSerivce: AuthService,
-    private router: Router
+    private router: Router,
+    private tokenStorageService: TokenStorageService
     ) { }
 
   ngOnInit(): void {
@@ -28,7 +30,9 @@ export class LoginComponent implements OnInit {
 
     this.authSerivce.login(username, password).subscribe({
       next: data => {
-        console.log(data)
+        this.tokenStorageService.saveToken(data.token)
+        this.tokenStorageService.saveUser(data)
+        this.router.navigate(['home'])
       },
       error: err => {
         console.error(err)
@@ -36,6 +40,10 @@ export class LoginComponent implements OnInit {
     })
   }
   
+  reloadPage(): void {
+    window.location.reload()
+  }
+
   onRegisterClick(): void {
     this.router.navigate(['register']);
   }

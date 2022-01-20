@@ -9,9 +9,11 @@ import { UniformOrderComponent } from './uniform-order/uniform-order.component';
 import { UniformSampleComponent } from './uniform-sample/uniform-sample.component';
 import { RegisterComponent } from './register/register/register.component';
 import { CustomerComponent } from './customer/customer.component';
+import { ProfileComponent } from './profile/profile.component';
       
 const routes: Routes = [
   { path: 'home', component: HomeComponent },
+  { path: 'profile', component: ProfileComponent },
   { path: 'costume-order', component: CostumeOrderComponent },
   { path: 'costume-sample', component: CostumeSampleComponent },
   { path: 'uniform-order', component: UniformOrderComponent },

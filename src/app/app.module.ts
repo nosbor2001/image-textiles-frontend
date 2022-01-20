@@ -16,6 +16,8 @@ import { UniformSampleComponent } from './uniform-sample/uniform-sample.componen
 import { HttpClientModule } from '@angular/common/http';
 import { RegisterComponent } from './register/register/register.component';
 import { CustomerComponent } from './customer/customer.component';
+import { authInterceptorProviders } from 'src/_helpers/auth.interceptor';
+import { ProfileComponent } from './profile/profile.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +31,8 @@ import { CustomerComponent } from './customer/customer.component';
     UniformOrderComponent,
     UniformSampleComponent,
     RegisterComponent,
-    CustomerComponent
+    CustomerComponent,
+    ProfileComponent
   ],
   imports: [
     BrowserModule,
@@ -39,7 +42,7 @@ import { CustomerComponent } from './customer/customer.component';
     NgbModule,
     HttpClientModule
   ],
-  providers: [],
+  providers: [authInterceptorProviders],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
