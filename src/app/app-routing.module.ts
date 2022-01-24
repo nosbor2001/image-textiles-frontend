@@ -10,10 +10,11 @@ import { UniformSampleComponent } from './uniform-sample/uniform-sample.componen
 import { RegisterComponent } from './register/register/register.component';
 import { CustomerComponent } from './customer/customer.component';
 import { ProfileComponent } from './profile/profile.component';
+import { AuthGuardService } from './services/auth-guard.service';
       
 const routes: Routes = [
   { path: 'home', component: HomeComponent },
-  { path: 'profile', component: ProfileComponent },
+  { path: 'profile', component: ProfileComponent, canActivate:[AuthGuardService] },
   { path: 'costume-order', component: CostumeOrderComponent },
   { path: 'costume-sample', component: CostumeSampleComponent },
   { path: 'uniform-order', component: UniformOrderComponent },

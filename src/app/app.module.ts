@@ -42,7 +42,9 @@ import { ProfileComponent } from './profile/profile.component';
     NgbModule,
     HttpClientModule
   ],
-  providers: [authInterceptorProviders],
+  providers: [
+    authInterceptorProviders
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
