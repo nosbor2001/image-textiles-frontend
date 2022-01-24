@@ -15,7 +15,7 @@ import { UniformOrderComponent } from './uniform-order/uniform-order.component';
 import { UniformSampleComponent } from './uniform-sample/uniform-sample.component';
 import { HttpClientModule } from '@angular/common/http';
 import { RegisterComponent } from './register/register/register.component';
-import { CustomerComponent } from './customer/customer.component';
+import { ContactComponent } from './contact/contact.component';
 import { authInterceptorProviders } from 'src/_helpers/auth.interceptor';
 import { ProfileComponent } from './profile/profile.component';
 
@@ -31,7 +31,7 @@ import { ProfileComponent } from './profile/profile.component';
     UniformOrderComponent,
     UniformSampleComponent,
     RegisterComponent,
-    CustomerComponent,
+    ContactComponent,
     ProfileComponent
   ],
   imports: [

@@ -8,7 +8,7 @@ import { CostumeSampleComponent } from './costume-sample/costume-sample.componen
 import { UniformOrderComponent } from './uniform-order/uniform-order.component';
 import { UniformSampleComponent } from './uniform-sample/uniform-sample.component';
 import { RegisterComponent } from './register/register/register.component';
-import { CustomerComponent } from './customer/customer.component';
+import { ContactComponent } from './contact/contact.component';
 import { ProfileComponent } from './profile/profile.component';
 import { AuthGuardService } from './services/auth-guard.service';
       
@@ -20,7 +20,7 @@ const routes: Routes = [
   { path: 'uniform-order', component: UniformOrderComponent },
   { path: 'uniform-sample', component: UniformSampleComponent },
   { path: 'register', component: RegisterComponent},
-  { path: 'customer', component: CustomerComponent },
+  { path: 'contact', component: ContactComponent },
   { path: 'login', component: LoginComponent },
   { path: '',   redirectTo: '/login', pathMatch: 'full' },
   { path: '**', component: PageNotFoundComponent }
