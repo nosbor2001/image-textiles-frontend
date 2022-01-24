@@ -11,6 +11,7 @@ import { RegisterComponent } from './register/register/register.component';
 import { ContactComponent } from './contact/contact.component';
 import { ProfileComponent } from './profile/profile.component';
 import { AuthGuardService } from './services/auth-guard.service';
+import { CustomerComponent } from './customer/customer.component';
       
 const routes: Routes = [
   { path: 'home', component: HomeComponent },
@@ -20,6 +21,7 @@ const routes: Routes = [
   { path: 'uniform-order', component: UniformOrderComponent },
   { path: 'uniform-sample', component: UniformSampleComponent },
   { path: 'register', component: RegisterComponent},
+  { path: 'customer', component: CustomerComponent},
   { path: 'contact', component: ContactComponent },
   { path: 'login', component: LoginComponent },
   { path: '',   redirectTo: '/login', pathMatch: 'full' },

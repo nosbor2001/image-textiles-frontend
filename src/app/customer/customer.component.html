@@ -1,0 +1,80 @@
+<app-nav-bar></app-nav-bar>
+<router-outlet></router-outlet>
+
+<div class="container-fluid parent">
+    <div class="child" formGroupName="contact">
+        <h1>New Customer</h1>
+        <!-- <form [formGroup]="customer" (ngSubmit)="onSubmit()"></form> -->
+
+        <!-- <label for="customerName">Customer Name: </label>
+        <input id="customerName" type="text" class="form-control mb-4" formControlName="customerName"> -->
+
+        <!-- <div formGroupName="address">
+            <h3>Address</h3>
+          
+            <label for="street">Street: </label>
+            <input id="street" type="text" class="form-control mb-4" formControlName="street">
+          
+            <label for="city">City: </label>
+            <input id="city" type="text" class="form-control mb-4" formControlName="city">
+          
+            <label for="state">State: </label>
+            <input id="state" type="text" class="form-control mb-4" formControlName="state">
+          
+            <label for="zip">Zip Code: </label>
+            <input id="zip" type="text" class="form-control mb-4" formControlName="zip">
+        </div> -->
+    
+        <!-- <h3>Contact Details</h3> -->
+
+        <label for="customerName">Name: </label>
+        <input id="customerName" type="text" class="form-control mb-4" formControlName="customerName">
+
+        <label for="isMailShot">Is Mail Shot? </label>
+        <input id="isMailShot" type="text" class="form-control mb-4" formControlName="isMailShot">
+
+        <label for="customerHeardAbout">Heard About: </label>
+        <input id="customerHeardAbout" type="text" class="form-control mb-4" formControlName="customerHeardAbout">
+
+        <h3>Notes</h3>
+
+        <textarea id="contactNotes" rows="6" class="form-control"></textarea>
+    
+        <button class="btn btn-primary">Submit</button>
+    </div>
+
+    <div class="container-fluid child">
+        <table class="table">
+            <thead>
+              <tr>
+                <th scope="col">#</th>
+                <th scope="col">Customer</th>
+                <th scope="col">Contact</th>
+                <th scope="col">Address</th>
+                <th scope="col">Email</th>
+                <th scope="col">Notes</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">1</th>
+                <td>Mark</td>
+                <td>Otto</td>
+                <td>@mdo</td>
+              </tr>
+              <tr>
+                <th scope="row">2</th>
+                <td>Jacob</td>
+                <td>Thornton</td>
+                <td>@fat</td>
+              </tr>
+              <tr>
+                <th scope="row">3</th>
+                <td colspan="2">Larry the Bird</td>
+                <td>@twitter</td>
+              </tr>
+            </tbody>
+          </table>
+    </div>
+
+</div>
