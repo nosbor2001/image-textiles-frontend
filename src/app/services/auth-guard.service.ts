@@ -20,8 +20,10 @@ export class AuthGuardService implements CanActivate {
    }
 
   canActivate(next: ActivatedRouteSnapshot, state: RouterStateSnapshot): Promise<boolean> {
+    console.log(this.authService.isLoggedIn)
+
     return new Promise((resolve, reject) => {
-      if(!this.authService.isLoggedIn && this.routeURL != '/login') {
+      if(this.authService.getLogin() == false && this.routeURL != '/login') {
 
         this.routeURL = '/login'
 

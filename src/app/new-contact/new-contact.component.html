@@ -1,0 +1,97 @@
+<app-nav-bar></app-nav-bar>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-sm-7 col-md-5 col-lg-3 mx-auto">
+          <div class="card border-0 shadow rounded-3 my-5">
+            <div class="card-body p-4 p-sm-5">
+              <h5 class="card-title text-center mb-5 fw-light fs-5">Create New Contact</h5>
+                        <form [formGroup]='contactForm' (ngSubmit)="onSubmit()">
+
+                            <div class="form-floating mb-3">
+                                <label for="customer">Customer</label> <br>
+                                <select name="cusomter" class="form-select" id="customer" formControlName="customer">
+                                    <option *ngFor="let customer of customers">{{customer.name}}</option>
+                                </select>
+                            </div>
+
+                            <div class="form-floating mb-3">
+                                <label for="firstName">First Name</label>
+                                <input type="text" class="form-control" id="firstName" formControlName="firstName">
+                            </div>
+                        
+                            <div class="form-floating mb-3">
+                                <label for="lastName">Last Name</label>
+                                <input type="text" class="form-control" id="lastName" formControlName="lastName">
+                            </div>
+                        
+                            <div class="form-floating mb-3">
+                                <label for="position">Position</label>
+                                <input type="text" class="form-control" id="position" formControlName="position">
+                            </div>
+
+                            <div class="form-floating mb-3">
+                                <label for="address">Address</label>
+                                <input type="text" class="form-control" id="address" formControlName="address">
+                            </div>
+
+                            <div class="form-floating mb-3">
+                                <label for="phoneNumber">Phone</label>
+                                <input type="text" class="form-control" id="phoneNumber" formControlName="phoneNumber">
+                            </div>
+
+                            <div class="form-floating mb-3">
+                                <label for="email">Email</label>
+                                <input type="text" class="form-control" id="email" formControlName="email">
+                            </div>
+
+                            <div class="form-floating mb-3">
+                                <label for="responsibility">responsibility</label>
+                                <input type="text" class="form-control" id="responsibility" formControlName="responsibility">
+                            </div>
+                        
+                            
+                            <div class="d-grid">
+                                <button class="btn btn-primary btn-login text-uppercase fw-bold" type="submit">Create Contact</button>
+                            </div>
+                        
+                        </form>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-sm-11 col-md-9 col-lg-7 mx-auto">
+            <div class="card border-0 shadow rounded-3 my-5">
+              <div class="card-body p-4 p-sm-5">
+                <h5 class="card-title text-center mb-5 fw-light fs-5">Contacts</h5>
+                    <table class="table">
+                        <thead>
+                        <tr>
+                            <th scope="col">#</th>
+                            <th scope="col">Customer</th>
+                            <th scope="col">Name</th>
+                            <th scope="col">Position</th>
+                            <th scope="col">Address</th>
+                            <th scope="col">Phone #</th>
+                            <th scope="col">Email</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr *ngFor="let contact of contacts">
+                            <th >1</th>
+                            <td>{{contact.customer.name || 'FOO'}}</td>
+                            <td>{{contact.firstName + ' ' + contact.lastName}}</td>
+                            <td>{{contact.position}}</td>
+                            <td>{{contact.address}}</td>
+                            <td>{{contact.phoneNumber}}</td>
+                            <td>{{contact.email}}</td>
+                        </tr>
+                        
+                        </tbody>
+                    </table>
+                  </div>
+              </div>
+          </div>
+    </div>
+
+    
+</div>

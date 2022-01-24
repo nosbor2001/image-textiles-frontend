@@ -11,16 +11,17 @@ import { RegisterComponent } from './register/register/register.component';
 import { ContactComponent } from './contact/contact.component';
 import { ProfileComponent } from './profile/profile.component';
 import { AuthGuardService } from './services/auth-guard.service';
+import { NewContactComponent } from './new-contact/new-contact.component';
       
 const routes: Routes = [
   { path: 'home', component: HomeComponent },
-  { path: 'profile', component: ProfileComponent, canActivate:[AuthGuardService] },
+  { path: 'profile', component: ProfileComponent},
   { path: 'costume-order', component: CostumeOrderComponent },
   { path: 'costume-sample', component: CostumeSampleComponent },
   { path: 'uniform-order', component: UniformOrderComponent },
   { path: 'uniform-sample', component: UniformSampleComponent },
   { path: 'register', component: RegisterComponent},
-  { path: 'contact', component: ContactComponent },
+  { path: 'contact', component: NewContactComponent },
   { path: 'login', component: LoginComponent },
   { path: '',   redirectTo: '/login', pathMatch: 'full' },
   { path: '**', component: PageNotFoundComponent }

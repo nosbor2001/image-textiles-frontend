@@ -30,7 +30,7 @@ export class LoginComponent implements OnInit {
 
     this.authSerivce.login(username, password).subscribe({
       next: data => {
-        this.authSerivce.isLoggedIn = true
+        this.authSerivce.setLogin(true)
         this.tokenStorageService.saveToken(data.token)
         this.tokenStorageService.saveUser(data)
         this.router.navigate(['home'])

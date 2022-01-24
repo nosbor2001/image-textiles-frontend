@@ -4,58 +4,38 @@
 <div class="container-fluid parent">
     <div class="child" formGroupName="contact">
         <h1>New Contact</h1>
-        <form [formGroup]="costumeOrders" (ngSubmit)="onSubmit()"></form>
+        <form [formGroup]='contactForm' (ngSubmit)="onSubmit()">
 
-        <!-- <label for="customerName">Customer Name: </label>
-        <input id="customerName" type="text" class="form-control mb-4" formControlName="customerName"> -->
-
-        <!-- <div formGroupName="address">
-            <h3>Address</h3>
+          <label for="contactForename">First Name: </label>
+          <input id="contactForename" type="text" class="form-control mb-4" formControlName="contactForename">
           
-            <label for="street">Street: </label>
-            <input id="street" type="text" class="form-control mb-4" formControlName="street">
+          <label for="contactSurname">Last Name: </label>
+          <input id="contactSurname" type="text" class="form-control mb-4" formControlName="contactSurname">
           
-            <label for="city">City: </label>
-            <input id="city" type="text" class="form-control mb-4" formControlName="city">
+          <label for="contactPosition">Position: </label>
+          <input id="contactPosition" type="text" class="form-control mb-4" formControlName="contactPosition">
           
-            <label for="state">State: </label>
-            <input id="state" type="text" class="form-control mb-4" formControlName="state">
+          <label for="contactAddress">Address: </label>
+          <input id="contactAddress" type="text" class="form-control mb-4" formControlName="contactAddress">
           
-            <label for="zip">Zip Code: </label>
-            <input id="zip" type="text" class="form-control mb-4" formControlName="zip">
-        </div> -->
-    
-        <!-- <h3>Contact Details</h3> -->
-
-        <label for="contactForename">First Name: </label>
-        <input id="contactForename" type="text" class="form-control mb-4" formControlName="contactForename">
-
-        <label for="contactSurname">Last Name: </label>
-        <input id="contactSurname" type="text" class="form-control mb-4" formControlName="contactSurname">
-
-        <label for="contactPosition">Position: </label>
-        <input id="contactPosition" type="text" class="form-control mb-4" formControlName="contactPosition">
-
-        <label for="contactAddress">Address: </label>
-        <input id="contactAddress" type="text" class="form-control mb-4" formControlName="contactAddress">
-
-        <label for="contactPhone">Phone Number: </label>
-        <input id="contactPhone" type="text" class="form-control mb-4" formControlName="contactPhone">
-
-        <label for="contactEmail">Email: </label>
-        <input id="contactEmail" type="text" class="form-control mb-4" formControlName="contactEmail">
-
-        <label for="contactRole">Role: </label>
-        <input id="contactRole" type="text" class="form-control mb-4" formControlName="contactRole">
-        <h3>Notes</h3>
-
-        <!-- <input id="notes" type="text" class="form-control mb-4" formControlName="notes"> -->
-        <textarea id="contactNotes" rows="6" class="form-control"></textarea>
-    
-        <button class="btn btn-primary">Submit</button>
+          <label for="contactPhone">Phone Number: </label>
+          <input id="contactPhone" type="text" class="form-control mb-4" formControlName="contactPhone">
+          
+          <label for="contactEmail">Email: </label>
+          <input id="contactEmail" type="text" class="form-control mb-4" formControlName="contactEmail">
+          
+          <label for="contactRole">Role: </label>
+          <input id="contactRole" type="text" class="form-control mb-4" formControlName="contactRole">
+          <!-- <h3>Notes</h3> -->
+          
+          <!-- <input id="notes" type="text" class="form-control mb-4" formControlName="notes"> -->
+          <!-- <textarea id="contactNotes" rows="6" class="form-control"></textarea> -->
+          
+          <button class="btn btn-primary" type="submit">Submit</button>
+        </form>
     </div>
 
-    <div class="container-fluid child">
+    <!-- <div class="container-fluid child">
         <table class="table">
             <thead>
               <tr>
@@ -87,6 +67,6 @@
               </tr>
             </tbody>
           </table>
-    </div>
+    </div> -->
 
 </div>

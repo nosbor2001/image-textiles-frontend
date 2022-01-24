@@ -18,6 +18,8 @@ import { RegisterComponent } from './register/register/register.component';
 import { ContactComponent } from './contact/contact.component';
 import { authInterceptorProviders } from 'src/_helpers/auth.interceptor';
 import { ProfileComponent } from './profile/profile.component';
+import { AuthService } from './services/auth.service';
+import { NewContactComponent } from './new-contact/new-contact.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +34,8 @@ import { ProfileComponent } from './profile/profile.component';
     UniformSampleComponent,
     RegisterComponent,
     ContactComponent,
-    ProfileComponent
+    ProfileComponent,
+    NewContactComponent
   ],
   imports: [
     BrowserModule,
