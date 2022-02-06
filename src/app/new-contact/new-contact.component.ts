@@ -12,6 +12,8 @@ const API = "http://localhost:5454/api/"
 })
 export class NewContactComponent implements OnInit {
 
+  filters: any
+
   contactForm = this.formBuilder.group({
     customer: '',
     firstName: '',

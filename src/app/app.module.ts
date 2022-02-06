@@ -20,6 +20,8 @@ import { authInterceptorProviders } from 'src/_helpers/auth.interceptor';
 import { ProfileComponent } from './profile/profile.component';
 import { AuthService } from './services/auth.service';
 import { NewContactComponent } from './new-contact/new-contact.component';
+import { CustomersComponent } from './customers/customers.component';
+import { Ng2SearchPipeModule } from 'ng2-search-filter';
 
 @NgModule({
   declarations: [
@@ -35,7 +37,8 @@ import { NewContactComponent } from './new-contact/new-contact.component';
     RegisterComponent,
     ContactComponent,
     ProfileComponent,
-    NewContactComponent
+    NewContactComponent,
+    CustomersComponent
   ],
   imports: [
     BrowserModule,
@@ -43,7 +46,8 @@ import { NewContactComponent } from './new-contact/new-contact.component';
     ReactiveFormsModule,
     FormsModule,
     NgbModule,
-    HttpClientModule
+    HttpClientModule,
+    Ng2SearchPipeModule
   ],
   providers: [
     authInterceptorProviders

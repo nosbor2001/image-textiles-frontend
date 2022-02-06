@@ -63,6 +63,7 @@
             <div class="card border-0 shadow rounded-3 my-5">
               <div class="card-body p-4 p-sm-5">
                 <h5 class="card-title text-center mb-5 fw-light fs-5">Contacts</h5>
+                <input type="text" class="form-control" placeholder="Filter" [(ngModel)]="filters">
                     <table class="table">
                         <thead>
                         <tr>
@@ -76,8 +77,8 @@
                         </tr>
                         </thead>
                         <tbody>
-                        <tr *ngFor="let contact of contacts">
-                            <th >1</th>
+                        <tr *ngFor="let contact of contacts | filter:filters">
+                            <th >{{contact.id}}</th>
                             <td>{{contact.customer.name || 'FOO'}}</td>
                             <td>{{contact.firstName + ' ' + contact.lastName}}</td>
                             <td>{{contact.position}}</td>
